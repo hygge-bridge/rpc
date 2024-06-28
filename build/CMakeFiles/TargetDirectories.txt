@@ -1,0 +1,10 @@
+/home/hygge/codes/projectCode/rpc/build/CMakeFiles/edit_cache.dir
+/home/hygge/codes/projectCode/rpc/build/CMakeFiles/rebuild_cache.dir
+/home/hygge/codes/projectCode/rpc/build/example/CMakeFiles/edit_cache.dir
+/home/hygge/codes/projectCode/rpc/build/example/CMakeFiles/rebuild_cache.dir
+/home/hygge/codes/projectCode/rpc/build/example/callee/CMakeFiles/provider.dir
+/home/hygge/codes/projectCode/rpc/build/example/callee/CMakeFiles/edit_cache.dir
+/home/hygge/codes/projectCode/rpc/build/example/callee/CMakeFiles/rebuild_cache.dir
+/home/hygge/codes/projectCode/rpc/build/src/CMakeFiles/mprpc.dir
+/home/hygge/codes/projectCode/rpc/build/src/CMakeFiles/edit_cache.dir
+/home/hygge/codes/projectCode/rpc/build/src/CMakeFiles/rebuild_cache.dir

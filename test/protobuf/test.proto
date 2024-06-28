@@ -1,0 +1,53 @@
+syntax = "proto3"; // 声明protobuf的版本
+
+package hygge; // 声明代码所在的包，类似与C++的namespace
+
+// 定义登录请求消息类型
+message LoginRequest {
+    //=后面的数字表示这是第几个字段，如name是第一个字段
+    string name = 1; 
+    string pwd = 2;
+}
+
+// 由于很多响应类型都需要错误代码和错误类型，故单独定义出来
+message ResultCode {
+    int32 errcode = 1;
+    bytes errmsg = 2;
+}
+
+// 定义登录响应消息类型
+message LoginResponse {
+    ResultCode result = 1;
+    bool success = 2;
+}
+
+// 定义获取朋友列表请求消息类型
+message GetFriendListsRequest {
+    uint32 userid = 1;
+}
+
+// 定义个人信息消息类型
+message User {
+    bytes name = 1;
+    uint32 age = 2;
+    enum Sex {
+        MAN = 0;
+        WOMAN = 1;
+    }
+    Sex sex = 3;
+}
+
+// 定义获取朋友列表响应消息类型
+message GetFriendListsResponse {
+    ResultCode result = 1;
+    repeated User friend_list = 2; // 列表
+}
+
+// 定义rpc服务类时，默认不会生成相应的服务类描述，需要添加该选项
+option cc_generic_services = true;
+
+// 定义描述rpc方法的类型
+service UserServiceRpc {
+    rpc Login(LoginRequest) returns(LoginResponse);
+    rpc GetFriendLists(GetFriendListsRequest) returns(GetFriendListsResponse);
+}
